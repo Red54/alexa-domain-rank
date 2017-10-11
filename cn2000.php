@@ -15,7 +15,8 @@ function process($u)
 	foreach($b[1] as $i)
 	{
 		$d = strstr($i, '.');
-		fwrite($GLOBALS['f'], $i."\t".$d."\n");
+		$l = strrchr($d, '.');
+		fwrite($GLOBALS['f'], $i."\t".$d."\t".$l."\n");
 	}
 }
 
